@@ -12,5 +12,17 @@ def index(request):
     ''')
 
 
-def contacts(request):
-    return HttpResponse('<h1>Контакты</h1>')
+def tasks(request):
+    return HttpResponse('Все задачи')
+
+
+def task_info(request, task_name):
+    return HttpResponse(f'Информация о задаче {task_name}')
+
+
+def new_task(request):
+    return HttpResponse('Добавление задачи')
+
+
+def delete_task(request):
+    return HttpResponse('Удаление задачи')
