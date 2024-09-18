@@ -12,6 +12,10 @@ def index(request):
     ''')
 
 
+def set_cookie(request):
+    return HttpResponse()
+
+
 def tasks(request):
     return HttpResponse('Все задачи')
 
