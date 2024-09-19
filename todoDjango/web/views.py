@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def index(request):
     host = request.META['HTTP_HOST']
@@ -18,10 +20,6 @@ def set_cookie(request):
 
 def tasks(request):
     return HttpResponse('Все задачи')
-
-
-def task_info(request, task_name):
-    return HttpResponse(f'Информация о задаче {task_name}')
 
 
 def new_task(request):
